@@ -1,199 +1,534 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>영화 미학 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: #0d0d0f;
-      color: #ebebeb;
-      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
-      line-height: 1.6;
-      padding: 32px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <title>홍대 마사지 추천 | 오사카 데이트: 도심 속 완벽한 휴식 공간</title>
+    <meta name="description" content="홍대역 도보 3 분 거리의 프리미엄 마사지 샵을 소개합니다. 강직된 근육을 풀어주는 디테일한 관리와 프라이빗한 공간. 홍대 마사지 추천 리스트 1 순위, 오사카 데이트에서 여유를 найдите.">
+    <meta name="keywords" content="홍대 마사지 추천, 홍대 마사지, 홍대 마사지 오사카, 데블스 마사지, 프랜차이즈, 프리미엄 스파, 홍대역 마사지">
+    <link rel="canonical" href="https://nrb-hwagok.xyz/">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="홍대 마사지 추천 | 오사카 데이트">
+    <meta property="og:description" content="홍대 중심가, 당신만의 프라이빗한 안식처. 경직된 몸과 마음을 녹여내는 프리미엄 케어.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/1a1a1a/c5a880?text=OSAKA+DEBT+SEOUL">
+    <meta property="og:url" content="https://nrb-hwagok.xyz/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="홍대 마사지 추천 | 오사카 데이트">
+    <meta name="twitter:description" content="홍대 중심가, 당신만의 프라이빗한 안식처.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "오사카 데이트 (홍대점)",
+      "image": "https://osaka-debt.pages.dev/assets/hero.jpg",
+      "telephone": "010-6279-0862",
+      "url": "https://osaka-debt.pages.dev/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "홍대역 인근 (상세주소 문의)",
+        "addressLocality": "서울특별시 마포구",
+        "addressRegion": "서울",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.5563,
+        "longitude": 126.9242
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "02:00"
+      },
+      "priceRange": "$$$",
+      "description": "홍대 중심가에 위치한 프리미엄 마사지 및 스파 샵. 숙련된 테라피스트가 제공하는 고급스러운 케어를 경험하세요."
     }
-    .wrapper {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 60px;
-    }
-    .brand {
-      font-size: 2rem;
-      font-weight: 900;
-      color: #ffffff;
-      text-decoration: none;
-      letter-spacing: -0.05em;
-    }
-    nav { display: flex; gap: 24px; }
-    nav a {
-      color: #888888;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-    nav a:hover { color: #f43f5e; }
-    main { margin-bottom: 80px; }
-    .label {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: #f43f5e;
-      font-weight: bold;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 3rem;
-      font-weight: 900;
-      line-height: 1.15;
-      letter-spacing: -0.04em;
-      color: #ffffff;
-      margin-bottom: 40px;
-    }
-    .article-body {
-      font-size: 1.15rem;
-      color: #cccccc;
-      font-weight: 400;
-      max-width: 780px;
-    }
-    .article-body p { margin-bottom: 24px; }
-    .juice-link {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 900;
-      box-shadow: inset 0 -6px 0 #f43f5e;
-      transition: all 0.15s ease-in-out;
-    }
-    .juice-link:hover {
-      box-shadow: inset 0 -24px 0 #f43f5e;
-      color: #ffffff;
-    }
-    .archive-section {
-      margin-top: 80px;
-    }
-    .section-title {
-      font-size: 1rem;
-      font-family: monospace;
-      color: #888888;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 32px;
-    }
-    .archive-list {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .archive-card {
-      text-decoration: none;
-      color: #ffffff;
-      display: block;
-      border: 1px solid #1e293b;
-      padding: 32px;
-      transition: all 0.2s ease;
-    }
-    .archive-card:hover {
-      border-color: #f43f5e;
-      background-color: #0f172a;
-    }
-    .archive-card h3 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin-bottom: 12px;
-      letter-spacing: -0.02em;
-    }
-    .archive-card p {
-      color: #888888;
-      font-size: 0.95rem;
-    }
-    footer {
-      border-top: 1px solid #1e293b;
-      padding-top: 32px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      font-family: monospace;
-      color: #475569;
-    }
-    footer a { color: #475569; text-decoration: none; }
-    footer a:hover { color: #f43f5e; }
-    @media(max-width: 768px) {
-      header { flex-direction: column; gap: 20px; align-items: flex-start; }
-      h1 { font-size: 2.2rem; }
-      .archive-card { padding: 20px; }
-      .archive-card h3 { font-size: 1.2rem; }
-    }
-  </style>
+    </script>
+
+    <style>
+        /* CSS Variables & Reset */
+        :root {
+            --color-primary: #1a1a1a;
+            --color-secondary: #fafaf5;
+            --color-accent: #c5a880;
+            --color-text-muted: #666666;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: 'Helvetica Neue', 'Arial', sans-serif;
+            --spacing-gap: 48px;
+            --spacing-padding: 72px;
+            --spacing-section: 120px;
+            --max-width: 720px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            font-family: var(--font-serif);
+            line-height: 1.8;
+            font-size: 18px;
+            letter-spacing: -0.01em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Layout Containers */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: var(--spacing-section) 0;
+            border-bottom: 1px solid rgba(26, 26, 26, 0.1);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            margin-top: 48px;
+            border-top: 1px solid var(--color-primary);
+            padding-top: 24px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            font-family: var(--font-sans);
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 24px;
+            color: #333;
+        }
+
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 3.5rem;
+            padding-right: 12px;
+            padding-top: 4px;
+            font-family: var(--font-serif);
+            color: var(--color-accent);
+        }
+
+        /* Header & Navigation */
+        header {
+            padding: 32px 0;
+            position: sticky;
+            top: 0;
+            background-color: rgba(250, 250, 245, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-family: var(--font-sans);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: var(--font-sans);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 1px;
+            background-color: var(--color-primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-secondary);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: var(--spacing-section);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, #1a1a1a 90%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 0 24px;
+        }
+
+        .hero h1 {
+            color: var(--color-secondary);
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            color: rgba(250, 250, 245, 0.8);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 32px;
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            font-family: var(--font-sans);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        /* Content Styling */
+        .content-block {
+            margin-bottom: var(--spacing-gap);
+        }
+
+        .highlight {
+            color: var(--color-accent);
+            font-style: italic;
+        }
+
+        /* UGC Reviews */
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .review-card {
+            border: 1px solid rgba(26, 26, 26, 0.1);
+            padding: 32px;
+            background: #fff;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 12px;
+        }
+
+        .reviewer-name {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .review-date {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+
+        .stars {
+            color: var(--color-accent);
+            letter-spacing: 2px;
+        }
+
+        .review-text {
+            font-size: 1rem;
+            color: #444;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-primary);
+            color: var(--color-secondary);
+            padding: 72px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            color: rgba(250, 250, 245, 0.6);
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: var(--color-accent);
+            border-bottom: 1px solid transparent;
+        }
+
+        footer a:hover {
+            border-bottom: 1px solid var(--color-accent);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            :root {
+                --spacing-padding: 48px;
+                --spacing-section: 80px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-secondary);
+                flex-direction: column;
+                padding: 24px;
+                border-bottom: 1px solid #ddd;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                height: 60vh;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="wrapper">
+
     <header>
-      <a href="/" class="brand">STREET.KR</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="label">// BRUTALIST GRID SYSTEM</div>
-      <h1>영화 미학 지식 저널 및 아카이브</h1>
-      <div class="article-body">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>영화 미학</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="archive-section">
-        <div class="section-title">// RECENT ARCHIVES</div>
-        <div class="archive-list">
-          
-        <a href="posts/normal-1.html" class="archive-card">
-          <h3>안드레이 타르코프스키의 장시간 촬영(Long Take)과 조형적 침묵의 미학</h3>
-          <p>세계적인 영화 거장 안드레이 타르코프스키 감독이 고집했던 롱테이크 샷 기법은 단순히 기술적인 길이를 넘어 관객의 물리적 시간 감각을 정지시키고 인위적인 미장센 속 조형적 침묵을 체...</p>
-        </a>
-      
-
-        <a href="posts/normal-2.html" class="archive-card">
-          <h3>고전 공포영화 음향 효과 속 숨겨진 악기: 워터폰(Waterphone)의 금속성 불협화음</h3>
-          <p>스크린 위에 깃드는 기괴하고 날카로운 서스펜스를 조율할 때 필수로 채용되는 특수 타악기인 워터폰은 청동 실린더 내부에 차 있는 물의 양에 따라 공진 주파수가 극적으로 변하여 사람의...</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="archive-card">
-          <h3>스탠리 큐브릭 감독의 대칭 구도: 1점 투시 도식(One-Point Perspective)이 주는 심리적 압박</h3>
-          <p>완벽주의적인 시네아스트 스탠리 큐브릭이 애용했던 화면 정중앙의 1점 투시 수렴 대칭 구도는 관객의 시선을 강제로 가두어 인공적인 폐쇄 공포와 거역할 수 없는 심리적 억압 효과를 자...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="archive-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 화곡 셔츠룸 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="archive-card">
-          <h3>시네필과 영화 예술 매니아들이 엄선 정리한 화곡 셔츠룸 상세 정보 리포트</h3>
-          <p>빛과 어둠의 정교한 시각 프레임과 기하학적 미장센의 깊은 울림을 공부하며 시각 예술의 안목을 키워가는 현대의 시네필분들이라면, 극장 밖 현실 세계에서 느끼는 여가의 만족도와 품격 ...</p>
-        </a>
-      
+        <div class="container nav-wrapper">
+            <div class="logo">Osaka Debt</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#reviews">Reviews</a>
+                <a href="tel:01062790862" style="color: var(--color-accent); font-weight: bold;">Reserve</a>
+            </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>홍대 마사지 추천<br><span style="font-family: var(--font-sans); font-size: 0.5em; display:block; margin-top:10px; letter-spacing: 0.2em;">OSAKA DEBT HONGDAE</span></h1>
+                <p>소음에서 멀어지고, silence 에 가까워지는 곳.<br>당신의 일상에 쉼표가 되어 드립니다.</p>
+                <a href="tel:01062790862" class="cta-button">예약 문의 010-6279-0862</a>
+            </div>
+        </section>
+
+        <!-- Narrative Content -->
+        <section id="about" class="container">
+            <div class="content-block">
+                <h2>都市의 소음, 그리고 침묵</h2>
+                <p class="drop-cap">
+                    홍대 거리를 걷다 보면 느껴지는 그 특유의 활기, 그리고 피로. <br>
+                    우리는 종종 '쉬어야 한다'는 말을 하면서도 정작 어디로 가야 할지 망설이곤 합니다. 오사카 데이트 (Osaka Debt) 는 단순히 몸의 피로를 푸는 공간을 넘어, 당신의 감각을 깨우는 에디토리얼한 공간을 지향합니다.
+                </p>
+                <p>
+                    화려한 네온사인이 가득한 거리와는 다르게, 이곳은 <span class="highlight">Noir & Gold</span>의 톤으로 차분하게 가라앉아 있습니다. 프랜차이즈 특유의 획일화된 서비스가 아닌, 한 명의 테라피스트가 한 명의 고객을 위해 온전히 집중하는 'Franchise Quality, Boutique Service'를 경험하실 수 있습니다.
+                </p>
+                <p>
+                    많은 분들이 <strong>홍대 마사지 추천</strong>을 찾을 때 '가격'이나 '위치'만 보지만, 우리는 '분위기'와 '디테일'에 집착합니다. 입구에 들어서는 순간부터 느껴지는 은은한 아로마 향과 조명, 그리고 테라피스트의 손길 하나하나가 연극의 한 장면처럼 정교하게 연출됩니다.
+                </p>
+            </div>
+        </section>
+
+        <section id="experience" class="container">
+            <div class="content-block">
+                <h2>왜 오사카 데이트인가?</h2>
+                <p>
+                    단순한 마사지가 아닙니다. 이것은 일종의 의식 (Ritual) 에 가깝습니다. 
+                    우리의 시그니처 코스는 굳어버린 근육을 이완시키는 것을 넘어, 굳어버린 일상의 긴장감까지 풀어줍니다.
+                </p>
+                <ul style="list-style: none; padding-left: 0; margin-top: 32px;">
+                    <li style="margin-bottom: 16px; border-left: 2px solid var(--color-accent); padding-left: 16px;">
+                        <strong>Privecy First:</strong> 완전히 차단된 프라이빗 룸에서 타인의 시선 없이 온전히 휴식하세요.
+                    </li>
+                    <li style="margin-bottom: 16px; border-left: 2px solid var(--color-accent); padding-left: 16px;">
+                        <strong>Master Therapists:</strong> 오랜 경력의 전문가들이 당신의 몸 상태를 진단하고 맞춤형 케어를 제공합니다.
+                    </li>
+                    <li style="margin-bottom: 16px; border-left: 2px solid var(--color-accent); padding-left: 16px;">
+                        <strong>Aesthetic Space:</strong> 인스타그램에 올리고 싶은 공간, 하지만 그보다 중요한 것은 그 공간이 주는 평화입니다.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- UGC Reviews -->
+        <section id="reviews" class="container">
+            <h2>Guest Notes</h2>
+            <p style="font-size: 0.9rem; color: #666;">실제 이용하신 고객님의 솔직한 후기입니다.</p>
+            
+            <div class="review-grid">
+                <!-- Review 1 -->
+                <article class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Kim_Minji</span>
+                        <span class="review-date">2023. 10. 14</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">
+                        "홍대 마사지 추천으로 검색하다가 왔는데, 기대 이상이네요. 입구부터 분위기가 고급스러워서 놀랐어요. 테라피스트 쌤 손맛이 정말 일품입니다. 다음에 친구랑 또 올 거예요."
+                    </p>
+                </article>
+
+                <!-- Review 2 -->
+                <article class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Park_Cheol</span>
+                        <span class="review-date">2023. 10. 08</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">
+                        "회사일로 스트레스 받아서 왔는데, 90 분 동안 정말 세상이 멈춘 것 같았어요. 가격대가 좀 있지만 그만한 가치가 충분히 있는 공간입니다. 특히 아로마 오일 향이 기억에 남네요."
+                    </p>
+                </article>
+
+                <!-- Review 3 -->
+                <article class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer-name">Lee_Hyejin</span>
+                        <span class="review-date">2023. 09. 25</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">
+                        "프랜차이즈라 믿고 갔는데 서비스 퀄리티가 부티크 샵 수준이에요. 예약이 금방 차니까 미리 전화하는 게 좋을 것 같아요. 010-6279-0862 로 예약했더니 친절하게 받아주셨어요."
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Location & Contact -->
+        <section class="container" style="text-align: center; border-bottom: none;">
+            <h2>Visit Us</h2>
+            <p>
+                서울특별시 마포구 홍대 중심가<br>
+                (상세 주소는 예약 시 안내드립니다)
+            </p>
+            <p style="margin-top: 32px;">
+                <a href="tel:01062790862" style="font-size: 1.5rem; font-weight: bold; border-bottom: 2px solid var(--color-accent);">010-6279-0862</a>
+            </p>
+            <p style="margin-top: 16px; font-size: 0.9rem;">
+                Open Daily 10:00 - 02:00
+            </p>
+        </section>
     </main>
+
     <footer>
-      <div>&copy; 2026 STREET.KR. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
+        <div class="container">
+            <p>&copy; 2024 Osaka Debt Hongdae. All rights reserved.</p>
+            <p>
+                <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            </p>
+            <p style="margin-top: 24px; font-size: 0.8rem; opacity: 0.5;">
+                This site is for informational purposes only.
+            </p>
+        </div>
     </footer>
-  </div>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
