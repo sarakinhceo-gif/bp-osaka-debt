@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://blog.nrb-hwagok.xyz/sitemap.xml
+Sitemap: https://blog.nrb-hwagok.xyz/sitemap-pages.xml
